@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Sorting.h"
+#include "Heap.h"
 using namespace std;
 
 void N::Sorting::print(int arr[], int len)
@@ -75,8 +76,20 @@ void N::Sorting::mergeSort(int arr[], int l, int r)
 	}
 }
 
+void N::Sorting::heapSort(int arr[], int size)
+{
+	Heap heap;
+	heap.buildHeap(arr, size);
+	int heapSize = size;
+	for (int i = size - 1; i >= 1; i--)
+	{
+		heap.swap(arr[0], arr[i]);
+		heapSize--;
+		heap.heapify(arr, heapSize, 0);
+	}
 
 
+}
 
 
 void N::Sorting::test(int arr[], int len)

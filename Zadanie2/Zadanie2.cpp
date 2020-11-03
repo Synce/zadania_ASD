@@ -15,7 +15,7 @@ int main()
 
 	sorting.print(arr, 10);
 	sorting.test(arr, 10);
-	sorting.mergeSort(arr, 0, 10);
+	sorting.heapSort(arr, 10);
 	sorting.print(arr, 10);
 	sorting.test(arr, 10);
 
