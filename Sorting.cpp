@@ -91,6 +91,24 @@ void N::Sorting::heapSort(int arr[], int size)
 
 }
 
+void N::Sorting::insertSort(int array[], int len)
+{
+
+	for (int i, element, j = 1; j < len; j++) {
+		i = j - 1;
+		element = array[j];
+
+		while (i >= 0 && array[i] > element) {
+			array[i + 1] = array[i];
+			i--;
+		}
+		array[i + 1] = element;
+	}
+
+
+}
+
+
 
 void N::Sorting::test(int arr[], int len)
 {
