@@ -1,7 +1,12 @@
 ﻿
 #include <iostream>
 
+
+#include "AVL.h"
 #include "Sorting.h"
+
+#include  "BST.h"
+#include "RB.h"
 
 using namespace std;
 
@@ -47,10 +52,49 @@ int main()
 
 
 
+	BST tree_bst = BST();
+
+	tree_bst.Insert(3);
+
+	tree_bst.Insert(5);
+
+	tree_bst.Insert(2);
+
+	tree_bst.Insert(7);
+
+	tree_bst.Insert(8);
+	tree_bst.Insert(3);
+	cout << endl << "bst " << endl;
+	tree_bst.PostOrderPrint();
 
 
 
+	AVL avl_tree = AVL();
 
+	avl_tree.Insert(1);
+
+	avl_tree.Insert(3);
+
+	avl_tree.Insert(5);
+
+	avl_tree.Insert(4);
+	avl_tree.Insert(2);
+
+	cout << endl << endl << "avl" << endl;
+	avl_tree.PostOrderPrint();
+
+
+	RBTree rb_tree = RBTree();
+
+	rb_tree.Insert(7);
+	rb_tree.Insert(3);
+	rb_tree.Insert(18);
+	rb_tree.Insert(10);
+	rb_tree.Insert(22);
+	rb_tree.Insert(8);
+	rb_tree.Delete(18);
+	cout << endl << endl << "rb" << endl;
+	rb_tree.PostOrderPrint();
 
 
 
